@@ -14,7 +14,7 @@ public class SoundEffectController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag("Fruits")) aud.PlayOneShot(getFruits);
+        if (other.CompareTag("Fruits")) aud.PlayOneShot(getFruits);
         //if (other.CompareTag("Bomb")) aud.PlayOneShot(getBomb);
     }
 

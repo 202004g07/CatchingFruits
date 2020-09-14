@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 public class BasketController : MonoBehaviour
 {
+    public GameObject UI_Manager;
     void Update()
     {
         if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
@@ -20,4 +21,10 @@ public class BasketController : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Fruits")) UI_Manager.GetComponent<UIManager>().GetApple();
+        if (other.CompareTag("Bomb")) UI_Manager.GetComponent<UIManager>().GetBomb();
+    }
+
 }

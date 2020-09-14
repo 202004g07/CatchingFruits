@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e728412a0a7415b4d834ca57eb7d6c87
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Corporate Logo Bold
+  fontNames:
+  - Corporate Logo Bold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e627646387bad5a4fa9f2ffcb52c57dd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

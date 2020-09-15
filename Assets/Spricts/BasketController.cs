@@ -12,7 +12,7 @@ public class BasketController : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
-                Debug.Log(hit.point);
+                //Debug.Log(hit.point);
 
                 float x_Pos = Mathf.RoundToInt(hit.point.x);
                 float z_Pos = Mathf.RoundToInt(hit.point.z);

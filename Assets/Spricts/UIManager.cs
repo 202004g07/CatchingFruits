@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour
             return;
         }
         GO_Score.text = Score.text;
+
         GameUI.SetActive(false);
         GameOver.SetActive(true);
         SubCamera.SetActive(true);

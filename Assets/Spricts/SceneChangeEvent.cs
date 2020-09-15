@@ -10,7 +10,7 @@ public class SceneChangeEvent : MonoBehaviour
     public GameObject Game;
     public GameObject GameUI;
 
-    public GameObject GameOver;
+    public GameObject GameOverUI;
     public GameObject SubCamera;
 
     bool isActive = true;
@@ -31,12 +31,12 @@ public class SceneChangeEvent : MonoBehaviour
     }
     public void SetGameOverEnable()
     {
-        GameOver.SetActive(isActive);
+        GameOverUI.SetActive(isActive);
         SubCamera.SetActive(isActive);
     }
     public void SetGameOverDisable()
     {
-        GameOver.SetActive(!isActive);
+        GameOverUI.SetActive(!isActive);
         SubCamera.SetActive(!isActive);
     }
 }

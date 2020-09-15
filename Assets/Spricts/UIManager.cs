@@ -8,30 +8,43 @@ public class UIManager : MonoBehaviour
 {
     public Text Score;
     public Text Timer;
-
-    public GameObject Basket;
-
-    public GameObject GameOver;
     public Text GO_Score;
 
-    public GameObject Init;
-
+    public GameObject Basket;
+    public GameObject GameUI;
+    public GameObject GameOver;
     public GameObject SubCamera;
+    public GameObject Init;
 
     public float time = 30f;
     int point = 0;
     public int ApplePoint = 100;
     public int BombPoint = 2;
+
+    ItemGenerator itemGenerator;
+    private void Awake()
+    {
+        itemGenerator = GameObject.Find("ItemGenerator").GetComponent<ItemGenerator>();
+    }
     void Update()
     {
         if (time > 0)
         {
             time -= Time.deltaTime;
-            Timer.text = time.ToString("F1");
+
+            if (time >= 23) itemGenerator.SetParameter(1, 1.8f, 10);
+            else if (time >= 12) itemGenerator.SetParameter(0.8f, 2.4f, 14.4f);
+            else if (time >= 5) itemGenerator.SetParameter(0.5f, 3.3f, 10);
+            else itemGenerator.SetParameter(0.7f, 2.4f, 10.5f);
+
+            Debug.Log($"Span:{itemGenerator.Span}, Speed:{itemGenerator.Speed}, Ratio:{itemGenerator.Ratio}");
+
+            Timer.text = $"TIME: {time:F1}";
             Score.text = $"Score: {point}";
             return;
         }
         GO_Score.text = Score.text;
+        GameUI.SetActive(false);
         GameOver.SetActive(true);
         SubCamera.SetActive(true);
         Basket.GetComponent<BasketController>().enabled = false;

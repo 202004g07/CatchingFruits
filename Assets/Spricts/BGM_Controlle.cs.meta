@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d3e2846db75347041adef6bcec63854d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - TitleClip: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
+  - GameClip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
+  - GameOverClip: {fileID: 8300000, guid: 24808a4fde7aa1b469ca493c966d680a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

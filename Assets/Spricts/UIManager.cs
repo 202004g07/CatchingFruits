@@ -26,6 +26,10 @@ public class UIManager : MonoBehaviour
     {
         itemGenerator = GameObject.Find("ItemGenerator").GetComponent<ItemGenerator>();
     }
+    private void Start()
+    {
+        PlayerPrefs.SetInt("SceneFlag", 1);
+    }
     void Update()
     {
         if (time > 0)

@@ -27,7 +27,7 @@ public class TitleManager : MonoBehaviour
             GameUI.SetActive(true);
             GameScene.SetActive(true);
 
-            PlayerPrefs.SetInt("TitleFlag", 1);
+            // PlayerPrefs.SetInt("TitleFlag", 1);
         }
     }
 }

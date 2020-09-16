@@ -9,13 +9,10 @@ public class tika : MonoBehaviour
 
     public float speed = 1.0f;
     private float time;
-    // Start is called before the first frame update
     void Start()
     {
         text = gameObject.GetComponent<Text>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         text.color = SetAlphaColor(text.color);

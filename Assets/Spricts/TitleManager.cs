@@ -11,13 +11,10 @@ public class TitleManager : MonoBehaviour
 
     public GameObject GameUI;
     public GameObject GameScene;
-    // Start is called before the first frame update
     void Start()
     {
         Apple.GetComponent<Rigidbody>().AddForce(new Vector3(-Power, 0, 0));
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -26,8 +23,6 @@ public class TitleManager : MonoBehaviour
             TitleUI.SetActive(false);
             GameUI.SetActive(true);
             GameScene.SetActive(true);
-
-            // PlayerPrefs.SetInt("TitleFlag", 1);
         }
     }
 }

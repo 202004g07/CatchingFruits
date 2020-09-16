@@ -9,14 +9,12 @@ public class Pause : MonoBehaviour
     GameObject PausePanel;
     [SerializeField]
     Text test;
+
     bool isActive = true;
-    // Start is called before the first frame update
     void Start()
     {
         PausePanel.SetActive(!isActive);
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) && PlayerPrefs.GetInt("SceneFlag") == 1)
@@ -36,5 +34,10 @@ public class Pause : MonoBehaviour
     public void testButton()
     {
         test.text += "t/";
+    }
+    public void OnResumeButtonClick()
+    {
+        Time.timeScale = 1;
+        PausePanel.SetActive(!isActive);
     }
 }

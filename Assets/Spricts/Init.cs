@@ -7,9 +7,6 @@ using UnityEngine.UI;
 
 public class Init : MonoBehaviour
 {
-    //public UnityEvent OnGameEnable;
-    //public UnityEvent OnGameDisable;
-
     public void ReLoad()
     {
         GameObject.Find("BGMController").GetComponent<BGM_Controlle>().InitBGMFlag();
@@ -17,12 +14,5 @@ public class Init : MonoBehaviour
         Scene loadScene = SceneManager.GetActiveScene();
         // Sceneの読み直し
         SceneManager.LoadScene(loadScene.name);
-        //Debug.Log("Load");
-        //OnGameDisable?.Invoke();
-        //Debug.Log("Disable");
-        //OnGameEnable?.Invoke();
-        //Debug.Log("Enable");
-        //GameScene.SetActive(true);
-        //GameUI.SetActive(true);
     }
 }

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class flagCheck : MonoBehaviour
 {
-
     void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("SceneFlag"));
+        //Debug.Log(PlayerPrefs.GetInt("SceneFlag"));
     }
 }

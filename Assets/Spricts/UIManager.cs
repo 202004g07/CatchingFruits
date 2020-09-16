@@ -43,8 +43,6 @@ public class UIManager : MonoBehaviour
             else if (time >= 5) itemGenerator.SetParameter(0.5f, 3.3f, 10);
             else itemGenerator.SetParameter(0.7f, 2.4f, 10.5f);
 
-            Debug.Log($"Span:{itemGenerator.Span}, Speed:{itemGenerator.Speed}, Ratio:{itemGenerator.Ratio}");
-
             Timer.text = $"TIME: {time:F1}";
             Score.text = $"Score: {point}";
             return;

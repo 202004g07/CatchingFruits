@@ -8,6 +8,7 @@ public class BasketController : MonoBehaviour
     void Update()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
+
         if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -25,6 +26,7 @@ public class BasketController : MonoBehaviour
     {
         if (other.CompareTag("Fruits")) UI_Manager.GetComponent<UIManager>().GetApple();
         if (other.CompareTag("Bomb")) UI_Manager.GetComponent<UIManager>().GetBomb();
+        if (other.CompareTag("GoldenApple")) UI_Manager.GetComponent<UIManager>().GetGoldenApple();
     }
 
 }

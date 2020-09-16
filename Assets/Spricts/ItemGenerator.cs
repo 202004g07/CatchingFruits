@@ -4,6 +4,7 @@ public class ItemGenerator : MonoBehaviour
 {
     public GameObject ApplePrefab;
     public GameObject BombPrefab;
+    public GameObject GoldenApplePrefab;
 
     public float Span = 1.0f;
     public float Ratio = 20;
@@ -15,6 +16,7 @@ public class ItemGenerator : MonoBehaviour
         Speed = speed;
         Ratio = ratio;
     }
+
     float delta = 0;
     void Update()
     {
@@ -34,6 +36,7 @@ public class ItemGenerator : MonoBehaviour
             {
                 item = Instantiate(ApplePrefab);
             }
+
             item.transform.position = RndPos();
 
             item.GetComponent<ItemController>().FallSpeed = Speed;
@@ -42,5 +45,11 @@ public class ItemGenerator : MonoBehaviour
     public Vector3 RndPos()
     {
         return new Vector3(Random.Range(-1, 2), 4, Random.Range(-1, 2));
+    }
+    public void GenerateGoldenApple()
+    {
+        Vector3 GoldenA_Pos = RndPos();
+        GoldenA_Pos.y = 7;
+        Instantiate(GoldenApplePrefab, GoldenA_Pos, Quaternion.identity);
     }
 }

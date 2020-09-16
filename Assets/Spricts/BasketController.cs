@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
 public class BasketController : MonoBehaviour
@@ -6,6 +7,19 @@ public class BasketController : MonoBehaviour
     public GameObject UI_Manager;
     void Update()
     {
+        //if (Time.timeScale == 0)
+        //{
+        //    return;
+        //}
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            // Debug.Log("Mouse Over UI");
+            return;
+        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Debug.Log("GameSceneMouseClick");
+        //}
         if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

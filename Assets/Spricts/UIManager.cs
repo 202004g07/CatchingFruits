@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
+        if (Time.timeScale == 0) return;
+
         if (time > 0)
         {
             time -= Time.deltaTime;

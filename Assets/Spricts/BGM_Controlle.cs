@@ -48,4 +48,22 @@ public class BGM_Controlle : MonoBehaviour
         isTitle = true;
         isGameOver = true;
     }
+    public void OnTitleBGM()
+    {
+        aud.Stop();
+        aud.clip = TitleClip;
+        aud.Play();
+    }
+    public void OnGameBGM()
+    {
+        aud.Stop();
+        aud.clip = GameClip;
+        aud.Play();
+    }
+    public void OnGameOverBGM()
+    {
+        aud.Stop();
+        aud.clip = GameOverClip;
+        aud.Play();
+    }
 }

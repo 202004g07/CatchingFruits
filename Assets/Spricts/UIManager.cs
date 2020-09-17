@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
     {
         itemGenerator = GameObject.Find("ItemGenerator").GetComponent<ItemGenerator>();
         rndTime = Random.Range(1, (int)time + 1);
-        Debug.Log(rndTime);
+        //Debug.Log(rndTime);
     }
     private void Start()
     {
@@ -69,5 +69,5 @@ public class UIManager : MonoBehaviour
     }
     public void GetApple() => point += ApplePoint;
     public void GetBomb() => point /= BombPoint;
-    public void GetGoldenApple() => point *= 2;
+    public void GetGoldenApple() => point += 1000;
 }

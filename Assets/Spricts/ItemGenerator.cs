@@ -49,7 +49,7 @@ public class ItemGenerator : MonoBehaviour
     public void GenerateGoldenApple()
     {
         Vector3 GoldenA_Pos = RndPos();
-        GoldenA_Pos.y = 7;
+        GoldenA_Pos.y = 10;
         Instantiate(GoldenApplePrefab, GoldenA_Pos, Quaternion.identity);
     }
 }

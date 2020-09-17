@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     public float FallSpeed;
-    public GameObject Stage;
+
     void Update()
     {
         transform.Translate(0, -FallSpeed * Time.deltaTime, 0);

@@ -16,6 +16,7 @@ public class BGM_Controlle : MonoBehaviour
     private void Awake()
     {
         aud = GetComponent<AudioSource>();
+        aud.loop = true;
     }
     private void Update()
     {
@@ -23,22 +24,22 @@ public class BGM_Controlle : MonoBehaviour
         {
             isTitle = !isTitle;
             aud.Stop();
-            aud.PlayOneShot(TitleClip);
-            aud.loop = true;
+            aud.clip = TitleClip;
+            aud.Play();
         }
         if (PlayerPrefs.GetInt("SceneFlag") == 1 && isGame)
         {
             isGame = !isGame;
             aud.Stop();
-            aud.PlayOneShot(GameClip);
-            aud.loop = true;
+            aud.clip = GameClip;
+            aud.Play();
         }
         if (PlayerPrefs.GetInt("SceneFlag") == 2 && isGameOver)
         {
             isGameOver = !isGameOver;
             aud.Stop();
-            aud.PlayOneShot(GameOverClip);
-            aud.loop = true;
+            aud.clip = GameOverClip;
+            aud.Play();
         }
     }
     public void InitBGMFlag()

@@ -51,7 +51,7 @@
             List<NotNullViolation> erroringFields = new List<NotNullViolation>();
 
             // Add null NotNull fields
-            List<FieldInfo> notNullFields = 
+            List<FieldInfo> notNullFields =
                 ReflectionUtility.GetFieldsWithAttributeFromType<NotNullAttribute>(
                     sourceMB.GetType(),
                     BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
@@ -65,7 +65,9 @@
             }
 
             // Remove NotNullViolations for prefabs with IgnorePrefab
-            bool isObjectAPrefab = PrefabUtility.GetPrefabType(sourceMB.gameObject) == PrefabType.Prefab;
+            //bool isObjectAPrefab = PrefabUtility.GetPrefabType(sourceMB.gameObject) == PrefabType.Prefab;
+            //変更
+            bool isObjectAPrefab = PrefabUtility.GetPrefabAssetType(sourceMB.gameObject) == PrefabAssetType.Regular;
             List<NotNullViolation> violationsToIgnore = new List<NotNullViolation>();
             if (isObjectAPrefab)
             {

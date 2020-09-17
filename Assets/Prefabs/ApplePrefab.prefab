@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FallSpeed: 1.5
-  Stage: {fileID: 0}
+  DifficultDirector: {fileID: 0}
 --- !u!114 &3431097515337271714
 MonoBehaviour:
   m_ObjectHideFlags: 0

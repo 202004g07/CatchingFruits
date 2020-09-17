@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TitleManager : MonoBehaviour
 {
@@ -8,6 +6,9 @@ public class TitleManager : MonoBehaviour
     public GameObject Apple;
     public GameObject Title;
     public GameObject TitleUI;
+
+    public GameObject DifficultyUI;
+    public GameObject HardCoreUI;
 
     public GameObject GameUI;
     public GameObject GameScene;
@@ -19,10 +20,25 @@ public class TitleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Title.SetActive(false);
-            TitleUI.SetActive(false);
-            GameUI.SetActive(true);
-            GameScene.SetActive(true);
+            DifficultyUI.SetActive(true);
         }
+    }
+    public void OnNomalButtonClick()
+    {
+        ToGameScene();
+    }
+    public void OnHardCoreButtonClick()
+    {
+        PlayerPrefs.SetInt("Difficulty", 1);
+        HardCoreUI.SetActive(true);
+        ToGameScene();
+    }
+    public void ToGameScene()
+    {
+        Title.SetActive(false);
+        TitleUI.SetActive(false);
+        DifficultyUI.SetActive(false);
+        GameUI.SetActive(true);
+        GameScene.SetActive(true);
     }
 }

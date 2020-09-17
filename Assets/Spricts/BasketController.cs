@@ -24,9 +24,9 @@ public class BasketController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Fruits")) UI_Manager.GetComponent<UIManager>().GetApple();
-        if (other.CompareTag("Bomb")) UI_Manager.GetComponent<UIManager>().GetBomb();
-        if (other.CompareTag("GoldenApple")) UI_Manager.GetComponent<UIManager>().GetGoldenApple();
+        if (other.CompareTag("Fruits")) UI_Manager.GetComponent<GameDirector>().GetApple();
+        if (other.CompareTag("Bomb")) UI_Manager.GetComponent<GameDirector>().GetBomb();
+        if (other.CompareTag("GoldenApple")) UI_Manager.GetComponent<GameDirector>().GetGoldenApple();
     }
 
 }
